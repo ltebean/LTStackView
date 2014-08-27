@@ -81,8 +81,8 @@
     CGRect frame=view.frame;
 
     view.frame=CGRectZero;
-    view.center=self.center;
-
+    view.center=CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+    
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [view addGestureRecognizer:recognizer];
 
