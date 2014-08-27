@@ -1,17 +1,16 @@
 
-
-# ![LTStackView]()
+# ![LTStackView](https://raw.githubusercontent.com/ltebean/LTStackView/master/image/demo.gif)
 
 ## Usage
 
-Initialze a stack view by:
+Initialize a stack view by:
 
 ```objective-c
 LTStackView *stackView = [[LTStackView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
 stackView.dataSource = self;
 ```
 
-Implement `LTStackViewDataSource` protocol:
+Then implement `LTStackViewDataSource` protocol:
 
 ```objective-c
 -(UIView*) nextView
