@@ -47,9 +47,11 @@
     
     if(recognizer.state == UIGestureRecognizerStateEnded) {
         if(CGRectContainsPoint(self.pullBackArea, recognizer.view.center) || !self.nextView){
+            CGPoint center=CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+
             POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
             positionAnimation.springBounciness=10;
-            positionAnimation.toValue = [NSValue valueWithCGPoint:self.center];
+            positionAnimation.toValue = [NSValue valueWithCGPoint:center];
             [recognizer.view pop_addAnimation:positionAnimation forKey:@"layerPositionAnimation"];
         }else{
             CGPoint velocity = [recognizer velocityInView:recognizer.view];
