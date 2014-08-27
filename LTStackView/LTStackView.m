@@ -81,22 +81,20 @@
 -(void) showView:(UIView*) view
 {
     CGRect frame=view.frame;
-
+    
     view.frame=CGRectZero;
     view.center=CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
     
+    
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [view addGestureRecognizer:recognizer];
-
+    
     [self addSubview:view];
-
-    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
-    animation.fromValue=[NSValue valueWithCGSize:CGSizeMake(0, 0)];
-
+    
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewSize];    
     animation.toValue=[NSValue valueWithCGSize:frame.size];
     animation.springBounciness=10;
-    [view.layer pop_addAnimation:animation forKey:@"zoomInAnimation"];
-
+    [view pop_addAnimation:animation forKey:@"zoomInAnimation"];
 }
 
 @end
