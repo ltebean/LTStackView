@@ -1,5 +1,5 @@
 
-# ![LTStackView](https://raw.githubusercontent.com/ltebean/LTStackView/master/image/demo.gif)
+# ![LTStackView](https://raw.githubusercontent.com/ltebean/LTStackView/master/image/demostration.gif)
 
 ## Usage
 
