@@ -20,3 +20,8 @@ Then implement `LTStackViewDataSource` protocol:
     return view;
 }
 ```
+
+Finaly call:
+```objective-c
+[stackView next];
+```

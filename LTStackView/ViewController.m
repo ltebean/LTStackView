@@ -32,11 +32,6 @@
     
     UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
     view.backgroundColor= [UIColor colorWithRed:((10 * self.counter) / 255.0) green:((20 * self.counter)/255.0) blue:((30 * self.counter)/255.0) alpha:1.0f];
-
-    UIView* overlay=[[UIView alloc]initWithFrame:CGRectMake(20 , 20, 50, 50)];
-    overlay.backgroundColor=[UIColor whiteColor];
-    
-    [view addSubview:overlay];
     return view;
 }
 
